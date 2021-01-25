@@ -5,7 +5,7 @@ import styles from './HashtagPicker.module.css';
 
 import { fetchCountries } from '../../api';
 
-const HashtagPicker = () => {
+const HashtagPicker = ({handleCountryChange}) => {
     const [ fetchedCountries, setFetchedCountries] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const HashtagPicker = () => {
 
     return (
         <FormControl className={styles.FormControl}>
-            <NativeSelect>
+            <NativeSelect defaultValue="" onChange={(e) => handleCountryChange(e.target.value)}>
                 <option value="global">Global</option>
                 {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
             </NativeSelect>
