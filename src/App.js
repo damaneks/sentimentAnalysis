@@ -8,7 +8,7 @@ class App extends React.Component {
 
     state = {
         data: {},
-        country: '',
+        hashtag: '',
     }
 
     async componentDidMount() {
@@ -17,10 +17,10 @@ class App extends React.Component {
         this.setState({data: fetchedData});
     }
 
-    handleCountryChange = async (country) => {
-        const fetchedData = await fetchData(country);
+    handleHashtagChange = async (hashtag) => {
+        const fetchedData = await fetchData(hashtag);
 
-        this.setState({data: fetchedData, country: country});
+        this.setState({data: fetchedData, hashtag: hashtag});
     }
 
     render() {
@@ -29,7 +29,7 @@ class App extends React.Component {
         return (
             <div className={styles.container}>
                 <Cards data={data}/>
-                <HashtagPicker handleCountryChange={this.handleCountryChange}/>
+                <HashtagPicker handleHashtagChange={this.handleHashtagChange}/>
                 <Chart />
                 <RandomTweets />
             </div>
