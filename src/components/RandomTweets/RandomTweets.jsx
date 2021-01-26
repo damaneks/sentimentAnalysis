@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardContent, Typography, Grid}  from '@material-ui/core';
-import cx from 'classnames';
+//import { Card, CardContent, Typography, Grid}  from '@material-ui/core';
+//import cx from 'classnames';
 
-import styles from './RandomTweets.module.css';
+// styles from './RandomTweets.module.css';
 
 const RandomTweets = () => {
     return (
