@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Cards, Chart, HashtagPicker, RandomTweets } from './components';
+import { Cards, Chart, HashtagPicker } from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
 
@@ -31,7 +31,6 @@ class App extends React.Component {
                 <Cards data={data}/>
                 <HashtagPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart />
-                <RandomTweets />
             </div>
         )
     }
