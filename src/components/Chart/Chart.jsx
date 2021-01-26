@@ -4,17 +4,22 @@ import { Line } from 'react-chartjs-2';
 
 import styles from './Chart.module.css';
 
-const Chart = () => {
+const Chart = ({hashtag}) => {
     const [dailyData, setDailyData] = useState([]);
-
+    
     useEffect(() => {
         const fetchAPI = async () => {
-            setDailyData(await fetchDailyData());
+            const initialDailyData = await fetchDailyData(hashtag);
+            setDailyData(initialDailyData);
         }
 
         fetchAPI();
     });
 
+    if(!dailyData.length) {
+        return "Brak rekordów\n";
+    }
+    
     const lineChart = (
         dailyData[0]
             ? (

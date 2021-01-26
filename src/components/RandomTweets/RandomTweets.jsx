@@ -4,9 +4,9 @@ import cx from 'classnames';
 
 import styles from './RandomTweets.module.css';
 
-const RandomTweets = ({ data: { positive, randomTweets } }) => {
-    if (!positive) {
-        return 'Loading...';
+const RandomTweets = ({ data: { positive, neutral, negative, randomTweets } }) => {
+    if (!(neutral + positive + negative)) {
+        return "";
     }
     return (
         <div className={styles.container}>
