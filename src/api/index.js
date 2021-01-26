@@ -12,7 +12,7 @@ export const fetchData = async (hashtag) => {
     }
 
     try {
-        const { data: {positive, neutral, negative, lastUpdate }} = await axios.get(apiUrl);
+        const { data: {positive, neutral, negative, lastUpdate }} = await axios.get(changeableUrl);
         
         return { positive, neutral, negative, lastUpdate, };
     } catch (error) {
@@ -23,7 +23,7 @@ export const fetchData = async (hashtag) => {
 export const fetchDailyData = async () => {
     try {
         const { data: {dailyData} } = await axios.get(apiUrl);
-        
+
         return dailyData;
     } catch (error) {
         console.log(error);
