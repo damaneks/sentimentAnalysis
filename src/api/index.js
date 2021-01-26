@@ -5,10 +5,10 @@ const url = `https://covid19.mathdro.id/api`;
 const apiUrl = `https://semanticanalizisapp.azurewebsites.net/test`;
 
 export const fetchData = async (hashtag) => {
-    let changeableUrl = url;
+    let changeableUrl = apiUrl;
 
     if(hashtag) {
-        changeableUrl = `${url}`
+        changeableUrl = `${apiUrl}`
     }
 
     try {
