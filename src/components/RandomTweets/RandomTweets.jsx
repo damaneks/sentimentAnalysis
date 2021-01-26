@@ -6,12 +6,8 @@ import styles from './RandomTweets.module.css';
 
 const RandomTweets = () => {
     return (
-        <div className={styles.container}>
-            <Grid container spacing={3} justify="center">
-                <Grid item component={Card} xs={12} md={12} className={cx(styles.card, styles.positive)}>
-                    <h1>Test</h1>
-                </Grid>
-            </Grid>
+        <div>
+            <h1>Test</h1>
         </div>
     )
 }
