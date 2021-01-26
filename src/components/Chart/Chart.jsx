@@ -17,9 +17,9 @@ const Chart = ({hashtag}) => {
     });
 
     if(!dailyData.length) {
-        return "Brak rekordów\n";
+        return "Loading\n";
     }
-    
+    console.log("test");
     const lineChart = (
         dailyData[0]
             ? (
