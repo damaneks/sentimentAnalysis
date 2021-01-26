@@ -8,7 +8,7 @@ export const fetchData = async (hashtag) => {
     if(hashtag) {
         changeableUrl = `${apiUrl}/${hashtag}`
     } else {
-        changeableUrl = `${apiUrl}/test`
+        changeableUrl = `${apiUrl}/global`
     }
 
     try {
@@ -26,7 +26,7 @@ export const fetchDailyData = async (hashtag) => {
     if(hashtag) {
         changeableUrl = `${apiUrl}/${hashtag}`
     } else {
-        changeableUrl = `${apiUrl}/test`
+        changeableUrl = `${apiUrl}/global`
     }
 
 

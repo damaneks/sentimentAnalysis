@@ -8,7 +8,7 @@ class App extends React.Component {
 
     state = {
         data: {},
-        hashtag: 'test',
+        hashtag: 'global',
     }
 
     async componentDidMount() {
