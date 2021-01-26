@@ -23,14 +23,15 @@ const Chart = () => {
                         labels: dailyData.map(({ date }) => date),
                         datasets: [{
                             data: dailyData.map(({ confirmed }) => confirmed),
-                            label: 'Infected',
-                            borderColor: '#3333ff',
+                            label: 'Pozytywne',
+                            borderColor: 'rgb(0, 255, 0)',
+                            backgroundColor: 'rgba(0, 255, 0, 0.25)',
                             fill: true,
                         }, {
                             data: dailyData.map(({ deaths }) => deaths),
-                            label: 'Deaths',
+                            label: 'Negatywne',
                             borderColor: 'red',
-                            backgroundColor: 'rgba( 255, 0, 0, 0.5)',
+                            backgroundColor: 'rgba( 255, 0, 0, 0.25)',
                             fill: true,
                         }],
                     }}
