@@ -6,14 +6,14 @@
     margin: 0 2% !important;
 }
 
-.infected {
-    border-bottom: 10px solid rgba( 0, 0, 255, 0.5);
-}
-
-.recovered {
+.positive {
     border-bottom: 10px solid rgba( 0, 255, 0, 0.5);
 }
 
-.deaths {
+.neutral {
+    border-bottom: 10px solid rgba(255, 255, 0, 0.5);
+}
+
+.negative {
     border-bottom: 10px solid rgba( 255, 0, 0, 0.5);
 }
