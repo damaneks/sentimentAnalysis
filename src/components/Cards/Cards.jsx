@@ -9,7 +9,6 @@ const Cards = ({ data: { positive, neutral, negative, lastUpdate } }) => {
     if (!positive) {
         return 'Loading...';
     }
-    console.log(lastUpdate)
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">

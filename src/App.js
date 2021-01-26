@@ -31,7 +31,7 @@ class App extends React.Component {
                 <Cards data={data}/>
                 <HashtagPicker handleHashtagChange={this.handleHashtagChange}/>
                 <Chart />
-                <RandomTweets />
+                <RandomTweets data={data}/>
             </div>
         )
     }
