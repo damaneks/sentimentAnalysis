@@ -10,6 +10,7 @@ const Chart = ({hashtag , chartType}) => {
     useEffect(() => {
         const fetchAPI = async () => {
             const initialDailyData = await fetchDailyData(hashtag);
+            initialDailyData.sort(compare);
             setDailyData(initialDailyData);
         }
 
@@ -19,8 +20,8 @@ const Chart = ({hashtag , chartType}) => {
     if(!dailyData.length) {
         return null;
     }   
-    dailyData.sort(compare);
-    console.log(chartType);
+    //dailyData.sort(compare);
+
     const lineChart = (
         dailyData[0]
             ? (

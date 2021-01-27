@@ -40,7 +40,7 @@ class App extends React.Component {
             <div className={styles.container}>
                 <Cards data={data}/>
                 <HashtagPicker handleHashtagChange={this.handleHashtagChange}/>
-                <BottomNavigation value={this.state.chartType} onChange={this.handleChartChange} className={styles.nav}>
+                <BottomNavigation value={this.state.chartType} onChange={this.handleChartChange}>
                     <BottomNavigationAction label={"Line"} value={0} icon={<ShowChartIcon />}/>
                     <BottomNavigationAction label={"Bar"} value={1} icon={<BarChartIcon />}/>
                 </BottomNavigation>
