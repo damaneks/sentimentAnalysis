@@ -18,8 +18,8 @@ const Chart = ({hashtag}) => {
 
     if(!dailyData.length) {
         return null;
-    }
-
+    }   
+    dailyData.sort(compare);
     const lineChart = (
         dailyData[0]
             ? (
@@ -55,5 +55,34 @@ const Chart = ({hashtag}) => {
         </div>
     )
 }
+
+function compare(a,b) {
+    a = a.date;
+    b = b.date;
+    const a_array = a.split(" ");
+    const b_array = b.split(" ");
+    if(Number(a_array[1]) < 10) {
+        a_array[1] = "0" + a_array[1];
+    }
+    if(Number(a_array[2]) < 10) {
+        a_array[1] = "0" + a_array[1];
+    }
+    if(Number(b_array[1]) < 10) {
+        b_array[1] = "0" + b_array[1];
+    }
+    if(Number(b_array[2]) < 10) {
+        b_array[2] = "0" + b_array[2];
+    }
+    const a_date = a_array[0] + a_array[1] + a_array[2];
+    const b_date = b_array[0] + b_array[1] + b_array[2];
+    if(a_date > b_date) {
+        return 1;
+    }
+    if(a_date < b_date) {
+        return -1;
+    }    
+    return 0;
+}
+
 
 export default Chart;
